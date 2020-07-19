@@ -13,6 +13,7 @@ Then we created a code that authorizes access to a user's Spotify profile to ext
 
 ## Clustering
 Now that we had both users' top 50 songs, we can use those tracks for reference to recommend new songs that are curated for both people's recent music tastes. K-means clustering was the method we chose so that we could group each song from our combined songs into a cluster (sub-genre/type of song) regarding their sonic features that are officially provided by Spotify. These features include: danceability, energy, key (musical key), loudness, mode (minor or major), speechiness, acousticness, instrumentalness, liveness, valence (how positive/happy/cheerful it sounds), and tempo.	We chose to focus on danceability, energy, speechiness, acousticness, valence, and tempo after concluding the other features were noise to our analysis. We also chose to have k=20 even though the elbow method showed that optimal k=6 since we wanted to have more specified clusters so that we could base our recommended songs off less generalized clusters.
+
 <img src="Photos/cluster_distribution.png" width="500" > 
 <img src="Photos/cluster_visualization.png" width="500" > 
 <img src="Photos/cluster_features_distribution.png" width="500" > 
