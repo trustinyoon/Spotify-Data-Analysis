@@ -16,7 +16,8 @@ Now that we had both users' top 50 songs, we can use those tracks for reference 
 
 <img src="Photos/cluster_distribution.png" width="500" > 
 <img src="Photos/cluster_visualization.png" width="500" > 
-<img src="Photos/cluster_features_distribution.png" width="500" > 
+
+<img src="Photos/cluster_features_distribution.png" width="400" > 
 
 ## Building the Playlist Creator
 Once we got a list of songs for each cluster, we fed each list into Spotipy's recommendation() function which takes in 5 seed tracks to base its recommendation from. For the clusters that contained more than 5 songs, we randomly chose 5 from its list to represent the cluster. The clusters that contained less than 5 songs, we left it as is. We ran the recommendation function for each cluster, and each time it produced 1 recommended track for the clusters that contained less than 5 songs and 2 recommended tracks for the clusters that contained 5 songs. We wanted to put more weight onto the clusters with more songs since that meant we generally enjoyed songs that fit in those clusters moreso than the smaller clusters. After fetching all the recommended tracks, we put it into a list and called another Spotipy function that automatically creates and places a playlist with a given list of songs straight to the user's Spotify library.
